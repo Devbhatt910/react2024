@@ -1,5 +1,11 @@
+import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
 import UseStateBooleanDemo from "./components/UseStateBooleanDemo";
+import NetflixHome from "./NetFlix/NetflixHome";
+import NavBar from "./NavBar";
+import NetflixMovies from "./NetFlix/NetflixMovies";
+import NetflixShows from "./NetFlix/NetflixShows";
+import NetflixErrorPage from "./NetFlix/NetflixErrorPage";
 // import UseStateArrayDemo from "./components/UseStateArrayDemo";
 // import UseStateCountDemo from "./components/UseStateCountDemo";
 // import Header from "./components/Header";
@@ -12,15 +18,13 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header title={title} color={color}></Header> */}
-      {/* <Footer></Footer> */}
-      {/* <Stu title={title} /> */}
-      {/* <MapDemo /> */}
-
-      {/* <UseStateCountDemo /> */}
-      {/* <UseStateArrayDemo /> */}
-
-      <UseStateBooleanDemo />
+      <NavBar />
+      <Routes>
+        <Route path="" element={<NetflixHome />}></Route>
+        <Route path="/movies" element={<NetflixMovies />}></Route>
+        <Route path="/shows" element={<NetflixShows />}></Route>
+        <Route path="/*" element={<NetflixErrorPage />}></Route>
+      </Routes>
     </div>
   );
 }
