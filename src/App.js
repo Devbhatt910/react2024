@@ -1,11 +1,14 @@
 import { Route, Router, Routes } from "react-router-dom";
 import "./App.css";
-import UseStateBooleanDemo from "./components/UseStateBooleanDemo";
+// import UseStateBooleanDemo from "./components/UseStateBooleanDemo";
 import NetflixHome from "./NetFlix/NetflixHome";
 import NavBar from "./NavBar";
 import NetflixMovies from "./NetFlix/NetflixMovies";
 import NetflixShows from "./NetFlix/NetflixShows";
 import NetflixErrorPage from "./NetFlix/NetflixErrorPage";
+import ThrillerMovies from "./NetFlix/ThrillerMovies";
+import ComedyMovies from "./NetFlix/ComedyMovies";
+import PlayShow from "./NetFlix/PlayShow";
 // import UseStateArrayDemo from "./components/UseStateArrayDemo";
 // import UseStateCountDemo from "./components/UseStateCountDemo";
 // import Header from "./components/Header";
@@ -23,7 +26,10 @@ function App() {
         <Route path="" element={<NetflixHome />}></Route>
         <Route path="/movies" element={<NetflixMovies />}></Route>
         <Route path="/shows" element={<NetflixShows />}></Route>
+        <Route path="/movies/thriller" element={<ThrillerMovies />}></Route>
+        <Route path="/movies/comedy" element={<ComedyMovies />}></Route>
         <Route path="/*" element={<NetflixErrorPage />}></Route>
+        <Route path="/shows/play/:id" element={<PlayShow />}></Route>
       </Routes>
     </div>
   );
