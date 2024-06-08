@@ -9,6 +9,11 @@ import NetflixErrorPage from "./NetFlix/NetflixErrorPage";
 import ThrillerMovies from "./NetFlix/ThrillerMovies";
 import ComedyMovies from "./NetFlix/ComedyMovies";
 import PlayShow from "./NetFlix/PlayShow";
+import FormDemo from "./forms/FormDemo";
+import FormDemo2 from "./forms/FormDemo2";
+import Button from "./NetFlix/Button";
+import DepentDropDown from "./components/DepentDropDown";
+import DemoGetApiCalling from "./Api/DemoGetApiCalling";
 // import UseStateArrayDemo from "./components/UseStateArrayDemo";
 // import UseStateCountDemo from "./components/UseStateCountDemo";
 // import Header from "./components/Header";
@@ -21,8 +26,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
-      <Routes>
+      {/* <NavBar /> */}
+      {/* <Routes>
         <Route path="" element={<NetflixHome />}></Route>
         <Route path="/movies" element={<NetflixMovies />}></Route>
         <Route path="/shows" element={<NetflixShows />}></Route>
@@ -30,7 +35,12 @@ function App() {
         <Route path="/movies/comedy" element={<ComedyMovies />}></Route>
         <Route path="/*" element={<NetflixErrorPage />}></Route>
         <Route path="/shows/play/:id" element={<PlayShow />}></Route>
-      </Routes>
+        <Route path="/formdemo" element={<FormDemo />}></Route>
+        <Route path="/formdemo2" element={<FormDemo2 />}></Route>
+      </Routes> */}
+      {/* <Button /> */}
+      {/* <DepentDropDown /> */}
+       <DemoGetApiCalling /> 
     </div>
   );
 }

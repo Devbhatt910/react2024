@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Button from './Button'
 
-const NetflixShows = () => {
+const NetflixShows = (props) => {
 
+  
   const shows=[
     {
       id:1010,
@@ -40,6 +42,13 @@ const NetflixShows = () => {
           })
         }
       </ul>
+
+      <Button
+      name='delete'
+      class='btn btn-danger'
+      funName={()=>{
+        console.log('delete');
+      }}></Button>
     </div>
   )
 }
